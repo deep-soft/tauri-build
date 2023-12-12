@@ -14,6 +14,7 @@ async function run(): Promise<void> {
     })
 
     core.setOutput('artifacts', JSON.stringify(artifacts))
+    core.setOutput('artifacts_string', artifacts)
   } catch (error) {
     if (error instanceof Error) core.setFailed(error.message)
   }
